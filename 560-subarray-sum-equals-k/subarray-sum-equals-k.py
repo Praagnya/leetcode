@@ -6,10 +6,9 @@ class Solution:
         
         for num in nums:
             rsum += num
-            z = rsum - k
             
-            if z in mp:
-                count += mp[z]
+            if rsum - k in mp:
+                count += mp[rsum - k]
             
             # update prefix sum frequency
             mp[rsum] = mp.get(rsum, 0) + 1
